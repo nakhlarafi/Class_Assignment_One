@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ans_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/result_layout"
+        android:textSize="25sp"
+        android:layout_centerInParent="true"
+        android:text="Choose the bigger number"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/left_button_layout"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:onClick="LeftButtonCheck"
+        android:text="no"/>
+
+
+    <TextView
+        android:id="@+id/result_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/right_button_layout"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="16dp"
+        android:onClick="RightButtonCheck"
+        android:text="no"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Again"
+        android:onClick="refresh"
+        android:layout_below="@+id/result_layout"/>
+
+</RelativeLayout>
